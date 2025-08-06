@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "生活记录",
+  "usingComponents": {
+    "life-header": "./components/LifeHeader",
+    "public-posts": "./components/PublicPosts",
+    "private-diaries": "./components/PrivateDiaries",
+    "today-schedule": "./components/TodaySchedule",
+    "publish-modal": "./components/PublishModal",
+    "diary-modal": "./components/DiaryModal",
+    "schedule-modal": "./components/ScheduleModal"
+  }
+}

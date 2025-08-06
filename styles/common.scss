@@ -1,0 +1,315 @@
+@import '../styles/variables.scss'; // 根据实际路径调整
+// 重置样式
+page {
+  background-color: $bg-secondary;
+  color: $text-primary;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+// 通用类
+.container {
+  padding: $spacing-md;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 颜色类
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $text-secondary;
+}
+
+.text-success {
+  color: $success-color;
+}
+
+.text-warning {
+  color: $warning-color;
+}
+
+.text-error {
+  color: $error-color;
+}
+
+// 背景色类
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-white {
+  background-color: $bg-primary;
+}
+
+.bg-gray {
+  background-color: $bg-secondary;
+}
+
+// 边距类
+.m-0 { margin: 0; }
+.m-1 { margin: $spacing-xs; }
+.m-2 { margin: $spacing-sm; }
+.m-3 { margin: $spacing-md; }
+.m-4 { margin: $spacing-lg; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: $spacing-xs; }
+.p-2 { padding: $spacing-sm; }
+.p-3 { padding: $spacing-md; }
+.p-4 { padding: $spacing-lg; }
+
+// 圆角类
+.rounded-sm { border-radius: $border-radius-sm; }
+.rounded-md { border-radius: $border-radius-md; }
+.rounded-lg { border-radius: $border-radius-lg; }
+.rounded-xl { border-radius: $border-radius-xl; }
+.rounded-full { border-radius: 50%; }
+
+// 阴影类
+.shadow-sm { box-shadow: $shadow-sm; }
+.shadow-md { box-shadow: $shadow-md; }
+.shadow-lg { box-shadow: $shadow-lg; }
+
+// 渐变背景
+.gradient-primary {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.gradient-food {
+  background: linear-gradient(135deg, #ff6b35 0%, #f093fb 50%, #f5f7fa 100%);
+}
+
+.gradient-life {
+  background: linear-gradient(135deg, #2196f3 0%, #9c27b0 50%, #e91e63 100%);
+}
+
+// 按钮样式
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-md;
+  font-size: $font-size-md;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &.btn-primary {
+    background: $primary-color;
+    color: $text-white;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  
+  &.btn-secondary {
+    background: $bg-secondary;
+    color: $text-primary;
+    border: 2rpx solid $border-light;
+    
+    &:hover {
+      background: $border-light;
+    }
+  }
+  
+  &.btn-outline {
+    background: transparent;
+    color: $primary-color;
+    border: 2rpx solid $primary-color;
+    
+    &:hover {
+      background: $primary-color;
+      color: $text-white;
+    }
+  }
+}
+
+// 卡片样式
+.card {
+  background: $bg-primary;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  margin-bottom: $spacing-md;
+}
+
+.card-header {
+  padding: $spacing-md;
+  border-bottom: 2rpx solid $border-light;
+}
+
+.card-content {
+  padding: $spacing-md;
+}
+
+.card-footer {
+  padding: $spacing-md;
+  border-top: 2rpx solid $border-light;
+}
+
+// 表单样式
+.form-item {
+  margin-bottom: $spacing-md;
+}
+
+.form-label {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: 600;
+  margin-bottom: $spacing-xs;
+  color: $text-primary;
+}
+
+.form-input {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 $spacing-md;
+  border: 2rpx solid $border-light;
+  border-radius: $border-radius-md;
+  font-size: $font-size-md;
+  background: $bg-primary;
+  
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+  
+  &::placeholder {
+    color: $text-disabled;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 160rpx;
+  padding: $spacing-md;
+  border: 2rpx solid $border-light;
+  border-radius: $border-radius-md;
+  font-size: $font-size-md;
+  line-height: 1.5;
+  background: $bg-primary;
+  resize: vertical;
+  
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+  
+  &::placeholder {
+    color: $text-disabled;
+  }
+}
+
+// 标签样式
+.tag {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  background: rgba($primary-color, 0.1);
+  color: $primary-color;
+  border: 2rpx solid rgba($primary-color, 0.2);
+  border-radius: $border-radius-sm;
+  font-size: $font-size-sm;
+  margin-right: $spacing-xs;
+  margin-bottom: $spacing-xs;
+}
+
+// 头像样式
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  
+  &.avatar-sm {
+    width: 60rpx;
+    height: 60rpx;
+  }
+  
+  &.avatar-md {
+    width: 80rpx;
+    height: 80rpx;
+  }
+  
+  &.avatar-lg {
+    width: 120rpx;
+    height: 120rpx;
+  }
+}
+
+// 加载动画
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg;
+  
+  &::after {
+    content: '';
+    width: 40rpx;
+    height: 40rpx;
+    border: 4rpx solid $border-light;
+    border-top-color: $primary-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 空状态
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl;
+  color: $text-disabled;
+  
+  .empty-icon {
+    font-size: 120rpx;
+    margin-bottom: $spacing-md;
+    opacity: 0.3;
+  }
+  
+  .empty-text {
+    font-size: $font-size-md;
+  }
+}

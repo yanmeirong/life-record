@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "美食打卡",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

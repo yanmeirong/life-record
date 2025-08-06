@@ -1,0 +1,212 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.profile-container.data-v-dd383ca2 {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding-bottom: 120rpx;
+}
+.user-info-section.data-v-dd383ca2 {
+  padding: 60rpx 32rpx 40rpx;
+  border-radius: 0 0 40rpx 40rpx;
+  color: white;
+}
+.user-info-section .user-header.data-v-dd383ca2 {
+  display: flex;
+  align-items: center;
+}
+.user-info-section .user-header .user-details.data-v-dd383ca2 {
+  margin-left: 10rpx;
+}
+.user-info-section .user-header .user-details .user-name.data-v-dd383ca2 {
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+.user-info-section .user-header .user-details .user-tags.data-v-dd383ca2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rpx;
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+.user-info-section .user-header .user-details .user-tags .tag.data-v-dd383ca2 {
+  margin: 0 6rpx;
+}
+.user-info-section .user-header .user-details .user-level.data-v-dd383ca2 {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+.user-info-section .user-header .user-details .user-level .level-tag.data-v-dd383ca2 {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4rpx 16rpx;
+  border-radius: 24rpx;
+  margin-right: 16rpx;
+}
+.user-info-section .user-stats.data-v-dd383ca2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+  padding-top: 30rpx;
+  border-top: 1rpx solid rgba(255, 255, 255, 0.3);
+}
+.user-info-section .user-stats .stat-item.data-v-dd383ca2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-info-section .user-stats .stat-item .stat-value.data-v-dd383ca2 {
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.user-info-section .user-stats .stat-item .stat-label.data-v-dd383ca2 {
+  font-sizee: 26rpx;
+  opacity: 0.9;
+  margin-top: 8rpx;
+}
+.section-header.data-v-dd383ca2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 32rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.section-header .section-title.data-v-dd383ca2 {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+.section-header .add-btn.data-v-dd383ca2 {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #ff5e62;
+}
+.section-header .add-btn .iconfont.data-v-dd383ca2 {
+  margin-right: 8rpx;
+  font-size: 30rpx;
+}
+.mood-section.data-v-dd383ca2 {
+  background: white;
+  margin: 24rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+.mood-section .mood-content.data-v-dd383ca2 {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 32rpx;
+}
+.mood-section .mood-content .mood-emoji.data-v-dd383ca2 {
+  font-size: 64rpx;
+  margin-right: 24rpx;
+}
+.mood-section .mood-content .mood-text.data-v-dd383ca2 {
+  font-size: 34rpx;
+  color: #333;
+}
+.wishlist-section.data-v-dd383ca2 {
+  background: white;
+  margin: 24rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+.wishlist-section .wishlist-items.data-v-dd383ca2 {
+  padding: 0 32rpx 24rpx;
+}
+.wishlist-section .wishlist-items .wish-item.data-v-dd383ca2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.wishlist-section .wishlist-items .wish-item .wish-text.data-v-dd383ca2 {
+  font-size: 32rpx;
+  color: #333;
+}
+.wishlist-section .wishlist-items .wish-item .wish-delete.data-v-dd383ca2 {
+  font-size: 36rpx;
+  color: #999;
+  padding: 10rpx 20rpx;
+}
+.wishlist-section .wishlist-items .empty-wish.data-v-dd383ca2 {
+  text-align: center;
+  padding: 60rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
+.achievement-section.data-v-dd383ca2 {
+  background: white;
+  margin: 24rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+.achievement-section .achievement-grid.data-v-dd383ca2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24rpx 32rpx;
+}
+.achievement-section .achievement-grid .achievement-item.data-v-dd383ca2 {
+  width: 50%;
+  padding: 24rpx 16rpx;
+  box-sizing: border-box;
+}
+.achievement-section .achievement-grid .achievement-item .badge-name.data-v-dd383ca2 {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 8rpx;
+}
+.achievement-section .achievement-grid .achievement-item .badge-desc.data-v-dd383ca2 {
+  font-size: 24rpx;
+  color: #666;
+  opacity: 0.9;
+}
+.function-entrance.data-v-dd383ca2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+.function-entrance .entrance-item.data-v-dd383ca2 {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #333;
+}
+.function-entrance .entrance-item .entrance-close.data-v-dd383ca2 {
+  color: #ff5e62;
+  margin-left: 10rpx;
+  font-size: 24rpx;
+}

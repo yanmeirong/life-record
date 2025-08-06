@@ -1,0 +1,70 @@
+{
+  "pages": [
+    {
+      "path": "pages/life/life",
+      "style": {
+        "navigationBarTitleText": "生活记录"
+      }
+    },
+    {
+      "path": "pages/food/food",
+      "style": {
+        "navigationBarTitleText": "美食"
+      }
+    },
+    // {
+    //   "path": "pages/recipes/recipes",
+    //   "style": {
+    //     "navigationBarTitleText": "食谱"
+    //   }
+    // },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+	{
+	  "path": "pages/login/login"
+	}
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "生活记录",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ff6b35",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/life/life",
+        "text": "记录"
+        // "iconPath": "static/icons/life.png",
+        // "selectedIconPath": "static/icons/life-active.png"
+      },
+      {
+        "pagePath": "pages/food/food",
+        "text": "美食"
+        // "iconPath": "static/icons/food.png",
+        // "selectedIconPath": "static/icons/food-active.png"
+      },
+      // {
+      //   "pagePath": "pages/recipes/recipes",
+      //   "text": "食谱"
+      //   // "iconPath": "static/icons/recipes.png",
+      //   // "selectedIconPath": "static/icons/recipes-active.png"
+      // },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+        // "iconPath": "static/icons/profile.png",
+        // "selectedIconPath": "static/icons/profile-active.png"
+      }
+    ]
+  }
+}
