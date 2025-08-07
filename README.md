@@ -11,3 +11,83 @@
 1. 克隆项目到本地
 2. 运行 `npm install` 安装依赖
 3. 运行 `npm start` 启动应用
+
+
+life-record-app/
+├── api/                     # API请求相关
+│   ├── request.js           # Axios实例配置
+│   ├── auth.js              # 认证相关接口
+│   ├── life.js              # 生活记录相关接口
+│   ├── food.js              # 美食打卡相关接口
+│   ├── recipe.js            # 食谱相关接口
+│   ├── travel.js            # 旅游相关接口
+│   └── profile.js           # 个人中心相关接口
+├── components/              # 公共组件
+│   ├── common/              # 通用组件
+│   │   ├── PostCard.vue     # 动态卡片组件
+│   │   ├── DiaryItem.vue    # 日记项组件
+│   │   ├── ScheduleItem.vue # 行程项组件
+│   │   ├── FoodCard.vue     # 美食卡片组件
+│   │   └── RecipeCard.vue   # 食谱卡片组件
+│   ├── layout/              # 布局组件
+│   │   ├── Header.vue       # 头部组件
+│   │   ├── Footer.vue       # 底部组件
+│   │   └── TabBar.vue       # 标签栏组件
+│   └── form/                # 表单组件
+│       ├── ImageUpload.vue  # 图片上传组件
+│       └── LocationPicker.vue # 位置选择组件
+├── pages/                   # 页面文件
+│   ├── index/               # 首页
+│   │   └── index.vue
+│   ├── auth/                # 认证相关
+│   │   ├── login.vue
+│   │   └── register.vue
+│   ├── life/                # 生活记录
+│   │   ├── index.vue
+│   │   ├── publish.vue
+│   │   ├── diary.vue
+│   │   └── schedule.vue
+│   ├── food/                # 美食打卡
+│   │   ├── index.vue
+│   │   └── publish.vue
+│   ├── travel/              # 旅游记录
+│   │   ├── index.vue
+│   │   └── publish.vue
+│   ├── recipe/              # 食谱模块
+│   │   ├── index.vue
+│   │   ├── detail.vue
+│   │   └── generate.vue
+│   └── profile/             # 个人中心
+│       ├── index.vue
+│       ├── wishes.vue
+│       └── health.vue
+├── static/                  # 静态资源
+│   ├── icons/               # 图标
+│   │   ├── home.png
+│   │   ├── home-active.png
+│   │   ├── life.png
+│   │   ├── life-active.png
+│   │   ├── food.png
+│   │   ├── food-active.png
+│   │   ├── recipe.png
+│   │   ├── recipe-active.png
+│   │   ├── profile.png
+│   │   └── profile-active.png
+│   └── images/              # 图片资源
+├── store/                   # Pinia状态管理
+│   ├── index.js             # 状态管理入口
+│   ├── user.js              # 用户相关状态
+│   ├── life.js              # 生活记录相关状态
+│   ├── food.js              # 美食打卡相关状态
+│   ├── recipe.js            # 食谱相关状态
+│   └── travel.js            # 旅游相关状态
+├── utils/                   # 工具函数
+│   ├── date.js              # 日期处理工具
+│   ├── format.js            # 格式化工具
+│   └── validate.js          # 验证工具
+├── App.vue                  # 应用入口组件
+├── main.js                  # 入口文件
+├── pages.json               # 页面路由配置
+├── manifest.json            # 应用配置
+├── package.json             # 项目依赖
+└── README.md                # 项目说明
