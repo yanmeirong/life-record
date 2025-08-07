@@ -50,7 +50,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx26e75534d9a81710",
         "setting" : {
             "urlCheck" : false
         },
@@ -69,9 +69,9 @@
         "enable" : false
     },
     "vueVersion" : "3",
-	"h5": {
-	    "devServer": {
-	      "devtool": "source-map"
-	    }
-	  }
+    "h5" : {
+        "devServer" : {
+            "devtool" : "source-map"
+        }
+    }
 }

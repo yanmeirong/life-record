@@ -311,9 +311,9 @@ to {
 .empty .empty-text {
   font-size: 28rpx;
 }
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 .app {
   min-height: 100vh;
 }
