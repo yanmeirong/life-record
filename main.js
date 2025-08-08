@@ -3,7 +3,7 @@ import App from './App.vue'
 import store from './store'
 import './styles/common.scss'
 import SvgIcon from './components/SvgIcon.vue'
- import './static/icons/iconfont.js' 
+//  import './static/icons/iconfont.js' 
 
 export function createApp() {
   const app = createSSRApp(App)

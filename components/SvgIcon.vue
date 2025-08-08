@@ -11,9 +11,12 @@ const props = defineProps({
   color: { type: String, default: '' }
 });
 
+// 确保size总是有效的数字
+const iconSize = typeof props.size === 'number' ? props.size : parseInt(props.size) || 24;
+
 const iconStyle = {
-  width: props.size + 'px',
-  height: props.size + 'px',
+  width: `${iconSize}px`,
+  height: `${iconSize}px`,
   color: props.color
 };
 </script>
@@ -25,5 +28,3 @@ const iconStyle = {
   overflow: hidden;
 }
 </style>
-
-

@@ -1,6 +1,5 @@
-
 module.exports = {
-  content: ['./src/**/*.{vue,js,ts,jsx,tsx,wxml}'], // 扫描小程序文件
+  content: ['./pages/**/*.{vue,js,ts,jsx,tsx,wxml}', './components/**/*.{vue,js,ts,jsx,tsx,wxml}'], // 修改为正确的路径
   theme: {
     extend: {},
   },
