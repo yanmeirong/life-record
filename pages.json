@@ -1,5 +1,11 @@
 {
   "pages": [
+	  // {
+	  //   "path": "pages/index/index",
+	  //   "style": {
+	  //     "navigationBarTitleText": "首页"
+	  //   }
+	  // },
     {
       "path": "pages/life/life",
       "style": {
@@ -9,7 +15,7 @@
     {
       "path": "pages/food/food",
       "style": {
-        "navigationBarTitleText": "美食"
+        "navigationBarTitleText": "打卡"
       }
     },
     // {
@@ -41,6 +47,12 @@
     "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "list": [
+		      // {
+		      //   "pagePath": "pages/index/index",
+		      //   // "iconPath": "static/icons/home.png",
+		      //   // "selectedIconPath": "static/icons/home-selected.png",
+		      //   "text": "首页"
+		      // },
       {
         "pagePath": "pages/life/life",
         "text": "记录"
@@ -49,7 +61,7 @@
       },
       {
         "pagePath": "pages/food/food",
-        "text": "美食"
+        "text": "打卡"
         // "iconPath": "static/icons/food.png",
         // "selectedIconPath": "static/icons/food-active.png"
       },

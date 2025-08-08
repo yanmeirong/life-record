@@ -23,7 +23,7 @@
       },
       {
         "pagePath": "pages/food/food",
-        "text": "美食"
+        "text": "打卡"
       },
       {
         "pagePath": "pages/profile/profile",
@@ -32,6 +32,6 @@
     ]
   },
   "usingComponents": {
-    "icon": "/components/Icon"
+    "svg-icon": "/components/SvgIcon"
   }
 }

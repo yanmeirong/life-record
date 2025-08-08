@@ -29,6 +29,14 @@
   margin-bottom: 32rpx;
   overflow: hidden;
   box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  /* 添加过渡效果 */
+  transform-origin: center top;
+  /* 设置变换原点 */
+}
+.tab-content .post-card.data-v-b11b0ef8:active {
+  transform: translateY(-8rpx);
+  box-shadow: 0 16rpx 40rpx rgba(0, 0, 0, 0.15);
 }
 .tab-content .post-card .post-header.data-v-b11b0ef8 {
   display: flex;
@@ -82,6 +90,9 @@
 .tab-content .post-card .post-actions .action-item.liked.data-v-b11b0ef8 {
   color: #e91e63;
   background: rgba(233, 30, 99, 0.1);
+}
+.tab-content .post-card .post-actions .action-item.data-v-b11b0ef8:active {
+  background-color: #f5f5f5;
 }
 .tab-content .post-card .post-actions .action-item .iconfont.data-v-b11b0ef8 {
   margin-right: 8rpx;

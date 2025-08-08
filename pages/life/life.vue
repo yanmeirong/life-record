@@ -108,10 +108,10 @@ const newPost = reactive({ content: '', isPublic: true })
 const newDiary = reactive({ title: '', content: '', mood: 'happy', tags: '' })
 const newSchedule = reactive({ time: '', title: '' })
 const moodOptions = [
-  { value: 'happy', emoji: '😊' },
-  { value: 'love', emoji: '❤️' },
-  { value: 'neutral', emoji: '😐' },
-  { value: 'sad', emoji: '😢' }
+  { value: 'happy', emoji: '😊' ,emojiIcon:'icon-a-smile'},
+  { value: 'love', emoji: '❤️',emojiIcon: 'icon-a-smile'},
+  { value: 'angry', emoji: '😐' ,emojiIcon:'icon-a-angry'},
+  { value: 'sad', emoji: '😢' ,emojiIcon:'icon-a-cry'}
 ]
 
 // 方法
@@ -329,7 +329,7 @@ const toggleSchedule = async(scheduleId) => {
     
 const getMoodEmoji = (mood) => {
   const option = moodOptions.find(o => o.value === mood)
-  return option ? option.emoji : '😊'
+  return option ? option.emojiIcon : 'icon-a-smile'
 }
 
 // 预留方法

@@ -7,6 +7,8 @@
 <script setup>
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
 import { useStore } from 'vuex'
+// import 'uni-icons'
+
 
 const store = useStore()
 
@@ -14,6 +16,9 @@ onLaunch(() => {
   console.log('App launched')
   // 初始化用户信息
   initUserInfo()
+    // const script = document.createElement('script');
+    // script.src = '/static/icons/iconfont.js'; // 确保路径正确
+    // document.head.appendChild(script);
 })
 
 onShow(() => {
@@ -41,6 +46,7 @@ const initUserInfo = () => {
 
 <style lang="scss">
 @import './styles/common.scss';
+@import url('/static/icons/iconfont.css'); 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

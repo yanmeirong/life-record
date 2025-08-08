@@ -31,8 +31,7 @@
   bottom: 120rpx;
   /* 距离底部的距离，可根据需求调整 */
   right: 0;
-  transform: translateX(-50%);
-  width: 160rpx;
+  width: 100rpx;
   /* 按钮容器宽度，可按需调整 */
 }
 .tab-content .write-diary-btn.data-v-59850d4d {
@@ -54,16 +53,18 @@
   overflow: hidden;
   box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
   padding: 40rpx;
+  transition: all 0.3s;
   /* 悬停时的弹起效果 */
-  /* 按下时的动画效果 */
 }
-.tab-content .diary-card .diary-card.data-v-59850d4d:hover {
-  transform: translateY(-12rpx);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+.tab-content .diary-card.data-v-59850d4d:hover {
+  transform: translateY(-8rem);
+  transition: transform 3s;
+  box-shadow: 0 16rpx 40rpx rgba(0, 0, 0, 0.15);
 }
-.tab-content .diary-card .diary-cardactive.data-v-59850d4d {
-  transform: translateY(-8rpx);
-  transition: transform 0.1s;
+.tab-content .diary-card.data-v-59850d4d:active {
+  transform: translateY(-8rem);
+  transition: transform 3s;
+  box-shadow: 0 16rpx 40rpx rgba(0, 0, 0, 0.15);
 }
 .tab-content .diary-card .diary-header.data-v-59850d4d {
   display: flex;
@@ -95,6 +96,11 @@
 }
 .tab-content .diary-card .diary-date .iconfont.data-v-59850d4d {
   margin-right: 8rpx;
+}
+.tab-content .diary-card .item-hover.data-v-59850d4d {
+  background-color: #f5f5f5;
+  transform: translateY(-4rpx);
+  box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.1);
 }
 .tab-content .diary-card .diary-content.data-v-59850d4d {
   line-height: 1.6;

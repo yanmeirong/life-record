@@ -1,0 +1,19 @@
+/* /common/iconfont.css */
+@font-face {
+  font-family: 'iconfont';
+  src: 
+    url('~@/static/iconfont/iconfont.woff2') format('woff2'),
+    url('~@/static/iconfont/iconfont.woff') format('woff'),
+    url('~@/static/iconfont/iconfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: inherit;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

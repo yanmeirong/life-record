@@ -48,10 +48,10 @@ const _sfc_main = {
     const newDiary = common_vendor.reactive({ title: "", content: "", mood: "happy", tags: "" });
     const newSchedule = common_vendor.reactive({ time: "", title: "" });
     const moodOptions = [
-      { value: "happy", emoji: "😊" },
-      { value: "love", emoji: "❤️" },
-      { value: "neutral", emoji: "😐" },
-      { value: "sad", emoji: "😢" }
+      { value: "happy", emoji: "😊", emojiIcon: "icon-a-smile" },
+      { value: "love", emoji: "❤️", emojiIcon: "icon-a-smile" },
+      { value: "angry", emoji: "😐", emojiIcon: "icon-a-angry" },
+      { value: "sad", emoji: "😢", emojiIcon: "icon-a-cry" }
     ];
     const switchTab = (tab) => {
       activeTab.value = tab;
@@ -236,7 +236,7 @@ const _sfc_main = {
     };
     const getMoodEmoji = (mood) => {
       const option = moodOptions.find((o) => o.value === mood);
-      return option ? option.emoji : "😊";
+      return option ? option.emojiIcon : "icon-a-smile";
     };
     const showComments = (postId) => common_vendor.index.__f__("log", "at pages/life/life.vue:336", "查看评论:", postId);
     const sharePost = (postId) => common_vendor.index.__f__("log", "at pages/life/life.vue:337", "分享动态:", postId);

@@ -1,5 +1,9 @@
 "use strict";
 const common_vendor = require("../../../common/vendor.js");
+if (!Array) {
+  const _component_SvgIcon = common_vendor.resolveComponent("SvgIcon");
+  _component_SvgIcon();
+}
 const _sfc_main = {
   __name: "DiaryModal",
   props: {
@@ -20,10 +24,14 @@ const _sfc_main = {
         c: common_vendor.o(($event) => __props.newDiary.title = $event.detail.value),
         d: common_vendor.f(__props.moodOptions, (mood, k0, i0) => {
           return {
-            a: common_vendor.t(mood.emoji),
-            b: mood.value,
-            c: __props.newDiary.mood === mood.value ? 1 : "",
-            d: common_vendor.o(($event) => __props.newDiary.mood = mood.value, mood.value)
+            a: "994740f3-0-" + i0,
+            b: common_vendor.p({
+              iconClass: mood.emojiIcon,
+              size: "24"
+            }),
+            c: mood.value,
+            d: __props.newDiary.mood === mood.value ? 1 : "",
+            e: common_vendor.o(($event) => __props.newDiary.mood = mood.value, mood.value)
           };
         }),
         e: __props.newDiary.content,

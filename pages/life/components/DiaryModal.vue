@@ -22,7 +22,8 @@
             :class="{ active: newDiary.mood === mood.value }"
             @tap="newDiary.mood = mood.value"
           >
-            {{ mood.emoji }}
+            <!--{{ mood.emoji }} -->
+		    <SvgIcon :iconClass="mood.emojiIcon"  size="24"/>
           </view>
         </view>
       </view>

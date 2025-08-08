@@ -29,15 +29,15 @@
           :class="{ liked: post.isLiked }"
           @tap="$emit('toggleLike', post.id)"
         >
-          <text class="iconfont icon-heart"></text>
+          <SvgIcon :iconClass="post.isLiked ?'icon-dianzan1':'icon-fabulous'" size="24"/>
           <text>{{ post.likes }}</text>
         </view>
         <view class="action-item" @tap="$emit('showComments', post.id)">
-          <text class="iconfont icon-comment"></text>
+          <SvgIcon iconClass="icon-comments"  size="24"  />
           <text>{{ post.comments }}</text>
         </view>
-        <view class="action-item" @tap="$emit('sharePost', post.id)">
-          <text class="iconfont icon-share"></text>
+        <view class="action-item" @tap="handleShare(post)">
+          <SvgIcon iconClass="icon-share"  size="16"/>
           <text>分享</text>
         </view>
       </view>
@@ -47,12 +47,75 @@
 
 <script setup>
 import { defineProps } from 'vue'
-defineProps({
+import { showActionSheet, shareAppMessage } from '@/utils/wechat' // 假设引入微信API工具
+
+const props = defineProps({
   posts: {
     type: Array,
     default: () => []
   }
 })
+
+// 处理分享逻辑
+const handleShare = (post) => {
+	
+  // 显示分享选项
+  showActionSheet({
+    itemList: ['分享给微信好友', '分享到朋友圈', '保存图片'],
+    success: (res) => {
+      switch(res.tapIndex) {
+        case 0:
+          // 分享给微信好友
+          shareToWechatFriend(post)
+          break
+        case 1:
+          // 分享到朋友圈
+          shareToTimeline(post)
+          break
+        case 2:
+          // 保存图片逻辑
+          $emit('savePostImage', post.id)
+          break
+      }
+    }
+  })
+}
+
+// 分享给微信好友
+const shareToWechatFriend = (post) => {
+  shareAppMessage({
+    title: `${post.author}的动态`,
+    path: `/pages/post/detail?id=${post.id}`,
+    imageUrl: post.images && post.images.length > 0 ? post.images[0] : '',
+    success: () => {
+      console.log('分享成功')
+    },
+    fail: (err) => {
+      console.log('分享失败', err)
+    }
+  })
+}
+
+// 分享到朋友圈
+const shareToTimeline = (post) => {
+  // 微信朋友圈分享API
+  wx.updateShareMenu({
+    withShareTicket: true,
+    isTimelineShare: true
+  })
+  
+  wx.shareTimeline({
+    title: `${post.author}的动态: ${post.content.substring(0, 20)}...`,
+    query: `id=${post.id}`,
+    imageUrl: post.images && post.images.length > 0 ? post.images[0] : '',
+    success: () => {
+      console.log('朋友圈分享成功')
+    },
+    fail: (err) => {
+      console.log('朋友圈分享失败', err)
+    }
+  })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -63,6 +126,14 @@ defineProps({
     margin-bottom: 32rpx;
     overflow: hidden;
     box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    transform-origin: center top; /* 设置变换原点 */
+    
+    // 卡片抬起效果
+    &:active {
+      transform: translateY(-8rpx);
+      box-shadow: 0 16rpx 40rpx rgba(0, 0, 0, 0.15);
+    }
 
     .post-header {
       display: flex;
@@ -118,6 +189,9 @@ defineProps({
         &.liked {
           color: #e91e63;
           background: rgba(233, 30, 99, 0.1);
+        }
+        &:active {
+          background-color: #f5f5f5;
         }
         .iconfont {
           margin-right: 8rpx;

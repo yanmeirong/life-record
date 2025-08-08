@@ -11,7 +11,7 @@
         placeholder="分享你的生活..."
         v-model="newPost.content"
       />
-	  <view class="space-y-3">
+	  <view class="space-y-3" >
 		   <button @click="chooseImage">选择图片</button>
 <!-- 		    <view class="flex items-center gap-2">
 		                       <Image class="h-5 w-5 text-gray-500" />

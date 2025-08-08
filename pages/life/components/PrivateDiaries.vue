@@ -40,13 +40,19 @@
       v-for="diary in diaries"
       :key="diary.id"
       class="diary-card"
+	    :class="{'item-hover': isHover}"
+	      @touchstart="isHover = true"
+	      @touchend="isHover = false"
     >
       <view class="diary-header">
         <text class="diary-title">{{ diary.title }}</text>
         <view class="diary-meta">
           <text class="mood-icon" :class="`mood-${diary.mood}`">
-            {{ getMoodEmoji(diary.mood) }}
+			<SvgIcon :iconClass="getMoodEmoji(diary.mood)"  size="24"/>
           </text>
+		  <text style="margin-left:8rpx;" @tap="$emit('showDiaryDialog')">
+		    <SvgIcon iconClass="icon-edit"  size="24"/>
+		  </text>
           <text class="iconfont icon-lock privacy-icon"></text>
         </view>
       </view>
@@ -70,7 +76,9 @@
     </view>
 	<!-- 写日记按钮容器 -->
 	<view class="write-diary-btn-container" @tap="$emit('showDiaryDialog')">
-	  <button class="write-diary-btn" bindtap="handleWriteDiary">写日记</button>
+	  <!-- <button class="write-diary-btn" bindtap="handleWriteDiary">
+		写日记</button> -->
+		<SvgIcon iconClass="icon-xieriji-copy" size="24" color="red" />
 	</view>
   </view>
 </template>
@@ -84,9 +92,10 @@ defineProps({
   },
   getMoodEmoji: {
     type: Function,
-    default: () => '😊'
+    default: () => 'icon-fabulous'
   }
 })
+const isHover = ref(false)
 </script>
 
 <style lang="scss" scoped>
@@ -96,8 +105,8 @@ defineProps({
 	  position: fixed;
 	  bottom:120rpx; /* 距离底部的距离，可根据需求调整 */
 	  right: 0;
-	  transform: translateX(-50%); 
-	  width: 160rpx; /* 按钮容器宽度，可按需调整 */
+	  // transform: translateX(-50%); 
+	  width: 100rpx; /* 按钮容器宽度，可按需调整 */
 	}
 	
 	.write-diary-btn {
@@ -120,6 +129,7 @@ defineProps({
     overflow: hidden;
     box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
     padding: 40rpx;
+	  transition: all 0.3s;
 	  // display: flex;
 	  // flex-direction: column;
 	  // width: 345rpx;
@@ -130,16 +140,20 @@ defineProps({
 	  // transition: transform 0.2s, box-shadow 0.2s;
 
     /* 悬停时的弹起效果 */
-      .diary-card:hover {
-        transform: translateY(-12rpx);
-        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* 按下时的动画效果 */
-      .diary-cardactive {
-        transform: translateY(-8rpx);
-        transition: transform 0.1s;
-	}
+    //   .diary-card:hover {
+    //     transform: translateY(-12rpx);
+    //     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+    // }
+       &:hover {
+         transform: translateY(-8rem);
+          transition: transform 3s;
+         box-shadow: 0 16rpx 40rpx rgba(0, 0, 0, 0.15);
+       }
+	    &:active {
+	      transform: translateY(-8rem);
+		   transition: transform 3s;
+	      box-shadow: 0 16rpx 40rpx rgba(0, 0, 0, 0.15);
+	    }
 
     .diary-header {
       display: flex;
@@ -173,7 +187,11 @@ defineProps({
         margin-right: 8rpx;
       }
     }
-
+.item-hover {
+  background-color: #f5f5f5;
+  transform: translateY(-4rpx);
+  box-shadow: 0 6rpx 16rpx rgba(0,0,0,0.1);
+}
     .diary-content {
       line-height: 1.6;
       margin-bottom: 24rpx;

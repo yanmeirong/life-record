@@ -18,7 +18,8 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+	"lazyCodeLoading": "requiredComponents"  // 新增此行
   },
   "condition": {},
   "editorSetting": {

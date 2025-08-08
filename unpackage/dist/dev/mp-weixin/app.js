@@ -2,6 +2,7 @@
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("./common/vendor.js");
 const store_index = require("./store/index.js");
+require("./static/icons/iconfont.js");
 if (!Math) {
   "./pages/life/life.js";
   "./pages/food/food.js";
@@ -17,18 +18,18 @@ const _sfc_main = {
   setup(__props) {
     const store = common_vendor.useStore();
     common_vendor.onLaunch(() => {
-      common_vendor.index.__f__("log", "at App.vue:14", "App launched");
+      common_vendor.index.__f__("log", "at App.vue:16", "App launched");
       initUserInfo();
     });
     common_vendor.onShow(() => {
-      common_vendor.index.__f__("log", "at App.vue:20", "App showed");
+      common_vendor.index.__f__("log", "at App.vue:25", "App showed");
     });
     common_vendor.onHide(() => {
-      common_vendor.index.__f__("log", "at App.vue:24", "App hide");
+      common_vendor.index.__f__("log", "at App.vue:29", "App hide");
     });
     const initUserInfo = () => {
       const userInfo = common_vendor.index.getStorageSync("userInfo");
-      common_vendor.index.__f__("log", "at App.vue:29", userInfo, "userInfo");
+      common_vendor.index.__f__("log", "at App.vue:34", userInfo, "userInfo");
       if (userInfo) {
         store.dispatch("user/setUserInfo", userInfo);
       } else {
@@ -42,11 +43,11 @@ const _sfc_main = {
     };
   }
 };
-const Icon = () => "./components/Icon.js";
+const SvgIcon = () => "./components/SvgIcon.js";
 function createApp() {
   const app = common_vendor.createSSRApp(_sfc_main);
   app.use(store_index.store);
-  app.component("Icon", Icon);
+  app.component("SvgIcon", SvgIcon);
   return {
     app
   };
